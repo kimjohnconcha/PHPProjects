@@ -22,9 +22,6 @@ if (isset($_GET["number_entered"])) {
   else if ($number < $numguess) {
     $message = "Your guess is lower, make it higher!";
   }
-  else if(!is_numeric($number)){
-    $message = "Input is not a number";
-  }
   else
     $message = "Congrats!! Your guess is right!! Number to be guess is {$numguess}";
 
@@ -32,7 +29,8 @@ if (isset($_GET["number_entered"])) {
     $message = "Please guess a number between 1 and 100";
   }
   
-  
+
+ 
 
   $count++;
 
@@ -49,9 +47,17 @@ else
   $message = "Please input a value!";
 
 
+  if(!is_numeric($_GET['number_entered'])){
+    $message = "Input is not a number";
+  }
+
+
 ?>
 
-
+<html>
+<head>
+  <title>Kim Concha</title>   
+</head>
 
 <form action="" method="GET">
 
@@ -82,7 +88,7 @@ else
   
 </form>
 
-
+</html>
 
 
 
