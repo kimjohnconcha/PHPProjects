@@ -26,7 +26,7 @@ if (isset($_GET["number_entered"])) {
     $message = "Congrats!! Your guess is right!! Number to be guess is {$numguess}";
 
   if ($number > 10 || $number < 0) {
-    $message = "Please guess a number between 1 and 100";
+    $message = "Please guess a number between 1 and 10";
   }
 
   $count++;
