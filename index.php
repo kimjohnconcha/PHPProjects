@@ -4,18 +4,18 @@ $rand = 0; //rand(1,100);
 $numguess = 0;
 $message = "";
 
-if (isset($_POST["numtobeguessed"])) {
-  $numguess = $_POST["numtobeguessed"];
+if (isset($_GET["numtobeguessed"])) {
+  $numguess = $_GET["numtobeguessed"];
   if($numguess == 0)
     $numguess = rand(1,100);
     //$rand = rand(1,100);
 }
 
-$count = isset($_POST['count']) ? $_POST['count'] : 0;
+$count = isset($_GET['count']) ? $_GET['count'] : 0;
 
-if (isset($_POST["number_entered"])) {
+if (isset($_GET["number_entered"])) {
 
-  $number= $_POST['number_entered'];
+  $number= $_GET['number_entered'];
 
   if($number > $numguess)
     $message = "Your guess is higher, make it lower!";
@@ -46,7 +46,7 @@ if (isset($_POST["number_entered"])) {
 
 
 
-<form action="" method="POST">
+<form action="" method="GET">
 
   Guess a Number Between 1 and 10:
 
@@ -60,7 +60,7 @@ if (isset($_POST["number_entered"])) {
 
   <?php
 
-  if (isset($_POST["number_entered"])) {
+  if (isset($_GET["number_entered"])) {
 
     //$number= $_POST['number_entered'];
 
