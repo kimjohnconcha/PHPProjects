@@ -22,6 +22,9 @@ if (isset($_GET["number_entered"])) {
   else if ($number < $numguess) {
     $message = "Your guess is lower, make it higher!";
   }
+  else if(!is_numeric($number)){
+    $message = "Input is not a number";
+  }
   else
     $message = "Congrats!! Your guess is right!! Number to be guess is {$numguess}";
 
