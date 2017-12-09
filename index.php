@@ -83,6 +83,10 @@ else
     echo "<br><br>";
     echo $message;
   }
+else {
+  echo "Missing guess parameter";
+}
+         
 
   ?>
   
