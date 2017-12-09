@@ -7,7 +7,7 @@ $message = "";
 if (isset($_GET["numtobeguessed"])) {
   $numguess = $_GET["numtobeguessed"];
   if($numguess == 0)
-    $numguess = rand(1,100);
+    $numguess = rand(1,10);
     //$rand = rand(1,100);
 }
 
