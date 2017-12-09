@@ -25,7 +25,7 @@ if (isset($_POST["number_entered"])) {
   else
     $message = "Congrats!! Your guess is right!! Number to be guess is {$numguess}";
 
-  if ($number > 100 || $number < 0) {
+  if ($number > 10 || $number < 0) {
     $message = "Please guess a number between 1 and 100";
   }
 
@@ -48,7 +48,7 @@ if (isset($_POST["number_entered"])) {
 
 <form action="" method="POST">
 
-  Guess a Number Between 1 and 100:
+  Guess a Number Between 1 and 10:
 
   <input type="text" name="number_entered" value=''/>
 
