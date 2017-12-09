@@ -7,7 +7,7 @@ $message = "";
 if (isset($_GET["numtobeguessed"])) {
   $numguess = $_GET["numtobeguessed"];
   if($numguess == 0)
-    $numguess = rand(1,10);
+    $numguess = rand(1,100);
     //$rand = rand(1,100);
 }
 
@@ -25,9 +25,11 @@ if (isset($_GET["number_entered"])) {
   else
     $message = "Congrats!! Your guess is right!! Number to be guess is {$numguess}";
 
-  if ($number > 10 || $number < 0) {
-    $message = "Please guess a number between 1 and 10";
+  if ($number > 100 || $number < 0) {
+    $message = "Please guess a number between 1 and 100";
   }
+  
+  
 
   $count++;
 
@@ -40,6 +42,8 @@ if (isset($_GET["number_entered"])) {
   }
 
 }
+else
+  $message = "Please input a value!";
 
 
 ?>
@@ -48,7 +52,7 @@ if (isset($_GET["number_entered"])) {
 
 <form action="" method="GET">
 
-  Guess a Number Between 1 and 10:
+  Guess a Number Between 1 and 100:
 
   <input type="text" name="number_entered" value=''/>
 
